@@ -111,6 +111,8 @@ obj-$(CONFIG_MSM_CACHE_M4M_ERP64) += cache_m4m_erp64.o
 obj-$(CONFIG_MSM_HAB) += hab/
 obj-$(CONFIG_QCOM_QDSS_BRIDGE) += qdss_bridge.o
 
-# TODO: remove me b/62057517
+# TODO: remove me b/62058353
 subdir-ccflags-y += \
-	-Wno-ignored-attributes
+	-Wno-ignored-attributes \
+	-Wno-gcc-compat \
+	-Wno-enum-conversion
